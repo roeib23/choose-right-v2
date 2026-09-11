@@ -1324,6 +1324,15 @@ main {
 
 .dish-card__photo img { border-radius: var(--opacity-hidden); }
 
+/* .screen הוא flex column בגובה קבוע עם גלילה. בלי flex-shrink:0
+   הדפדפן מכווץ את כל הילדים כשהתוכן גבוה מהמסך — וזה מחץ את
+   תמונת המנה לאפס במסכים הארוכים. הילדים שומרים על גובהם והמסך גולל. */
+.screen > * { flex-shrink: 0; }
+
+/* נקודת "הכי טעים" השתמשה בגוון הרקע החיוור של הקטגוריה ונראתה ריקה.
+   אותו כחול-אפור שמשמש כתאורת הקטגוריה בתמונות המנות. */
+.week__dot--tasty { background: #5B8BA5; border-color: #5B8BA5; }
+
 </style>
 </head>
 <body>
